@@ -1,0 +1,1 @@
+const spellsContainer = document.querySelector('#spellsContainer')
