@@ -11,7 +11,7 @@ const {getSpells, deleteSpell, createSpell, updateSpell} = require('./controller
 app.get(`/spells`, getSpells)
 app.delete(`/spells/:id`, deleteSpell)
 app.post(`/spells`, createSpell)
-app.put(`/spells/:id`, updateSpell)
+// app.put(`/spells/:id`, updateSpell)
 
 
 app.listen(4000, () => console.log("Server running on 4000"));

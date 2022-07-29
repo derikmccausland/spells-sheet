@@ -1,17 +1,17 @@
-let spells = require('./db.json')
+// let spells = require('./db.json')
 let globalID = 13
 
 module.exports = {
-    getspells: (req, res) => {
+    getSpells: (req, res) => {
         res.status(200).send(spells)
     },
-    deletespell: (req, res) => {
+    deleteSpell: (req, res) => {
         let index = spells.findIndex(elem => elem.id === +req.params.id)
         spells.splice(index, 1)
         res.status(200).send(spells)
     },
-    createspell: (req, res) => {
-        let {title,} =req.body
+    createSpell: (req, res) => {
+        let {title, spellLvl} =req.body
         let newSpell = {
             id: globalID,
             title,

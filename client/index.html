@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capstone</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h3>My Character's Spells</h3>
     <div>
+            <input 
+                type= 'text'
+                id= "spellInput"
+                placeholder="Enter your new spell"/>
 
-        <h3>My Character's Spells</h3>
-
-        <input 
-            type= 'text'
-            id= "spellInput"
-            placeholder="Enter your new spell"/>
-
-        <select id="spellLevel">
-            <option>Spell Level 0</option>
-            <option>Spell Level 1</option>
-            <option>Spell Level 2</option>
-            <option>Spell Level 3</option>
-        </select>
-        <button id="addSpell">Add</button><br>
-
+            <select id="spellLevel">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <button id="addSpell">Add</button><br>
+    </div> 
+    <div>
         <input type="checkbox" id="spelslot1" name="slot1" value="Bike">
         <label for="vehicle1"></label>
         
@@ -35,7 +35,9 @@
         
         <input type="checkbox" id="spelslot1" name="slot4" value="Bike">
         <label for="vehicle1"> First Level Spell Slots</label><br>
+    </div>
 
+    <div>
         <input type="checkbox" id="spelslot2" name="slot1" value="Car">
         <label for="vehicle2"></label>
         
@@ -44,13 +46,21 @@
         
         <input type="checkbox" id="spelslot2" name="slot3" value="Car">
         <label for="vehicle2"> Second Level Spell Slots</label><br>
+    </div>
 
+    <div>
         <input type="checkbox" id="spelslot3" name="slot1" value="Boat">
         <label for="vehicle3"></label>
 
         <input type="checkbox" id="spelslot3" name="slot2" value="Boat">
         <label for="vehicle3"> Third Level Spell Slots</label><br>
-
     </div>
+    <div>
+        <section id="spells-container"></section>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+
 </body>
 </html>
