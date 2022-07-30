@@ -1,42 +1,45 @@
-// let spells = require('./db.json')
+let movies = require('./db.json')
 let globalID = 13
 
 module.exports = {
-    getSpells: (req, res) => {
-        res.status(200).send(spells)
+    getMovies: (req, res) => {
+        res.status(200).send(movies)
     },
-    deleteSpell: (req, res) => {
-        let index = spells.findIndex(elem => elem.id === +req.params.id)
-        spells.splice(index, 1)
-        res.status(200).send(spells)
+    deleteMovie: (req, res) => {
+        let index = movies.findIndex(elem => elem.id === +req.params.id)
+        movies.splice(index, 1)
+        res.status(200).send(movies)
     },
-    createSpell: (req, res) => {
+    createMovie: (req, res) => {
         let {title, spellLvl} =req.body
-        let newSpell = {
+        let newMovie = {
             id: globalID,
             title,
             spellLvl,
         }
-        spells.push(newSpell)
-        res.status(200).send(spells)
+        movies.push(newMovie)
+        res.status(200).send(movies)
+
+
+    },
+    updateMovie: (req, res) => {
+        let { id } = req.params
+        let { type } = req.body
+        let index = movies.findIndex(elem => +elem.id === +id)
+
+        if (movies[index].rating === 5 && type === 'plus') {
+            res.status(400).send('cannot go above 5')
+        } else if (movies[index].rating === 0 && type === 'minus') {
+            res.status(400).send('cannot go below 0')
+        } else if (type === 'plus') {
+            movies[index].rating++
+            res.status(200).send(movies)
+        } else if (type === 'minus') {
+            movies[index].rating--
+            res.status(200).send(movies)
+        } else {
+            res.sendStatus(400)
+        }
     }
 }
-// updatespell: (req, res) => {
-//     let { id } = req.params
-//     let { type } = req.body
-//     let index = spells.findIndex(elem => +elem.id === +id)
 
-//     if (spells[index].rating === 5 && type === 'plus') {
-//         res.status(400).send('cannot go above 5')
-//     } else if (spells[index].rating === 0 && type === 'minus') {
-//         res.status(400).send('cannot go below 0')
-//     } else if (type === 'plus') {
-//         spells[index].rating++
-//         res.status(200).send(spells)
-//     } else if (type === 'minus') {
-//         spells[index].rating--
-//         res.status(200).send(spells)
-//     } else {
-//         res.sendStatus(400)
-//     }
-// }

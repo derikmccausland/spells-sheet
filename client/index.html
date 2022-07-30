@@ -1,66 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone</title>
+<html>
+  <head>
+    <title>Back End Assessment</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h3>My Character's Spells</h3>
-    <div>
-            <input 
-                type= 'text'
-                id= "spellInput"
-                placeholder="Enter your new spell"/>
+  </head>
+  <body class="container">
+    <header>
+      <h1>My Spell List</h1>
+  </header>
 
-            <select id="spellLevel">
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-            <button id="addSpell">Add</button><br>
-    </div> 
-    <div>
-        <input type="checkbox" id="spelslot1" name="slot1" value="Bike">
-        <label for="vehicle1"></label>
-        
-        <input type="checkbox" id="spelslot1" name="slot2" value="Bike">
-        <label for="vehicle1"></label>
-        
-        <input type="checkbox" id="spelslot1" name="slot3" value="Bike">
-        <label for="vehicle1"></label>
-        
-        <input type="checkbox" id="spelslot1" name="slot4" value="Bike">
-        <label for="vehicle1"> First Level Spell Slots</label><br>
-    </div>
+  <main>
 
-    <div>
-        <input type="checkbox" id="spelslot2" name="slot1" value="Car">
-        <label for="vehicle2"></label>
-        
-        <input type="checkbox" id="spelslot2" name="slot2" value="Car">
-        <label for="vehicle2"></label>
-        
-        <input type="checkbox" id="spelslot2" name="slot3" value="Car">
-        <label for="vehicle2"> Second Level Spell Slots</label><br>
-    </div>
+  <form>
+      <input 
+          type='text'
+          id="title"
+          placeholder="Add Spell"/>
 
-    <div>
-        <input type="checkbox" id="spelslot3" name="slot1" value="Boat">
-        <label for="vehicle3"></label>
+      <section id="ratings-container">
+          <p>Spell Level</p>
+          <div id="radio-container">
+              <label for="zero">
+                  <input
+                      type="radio"
+                      name="ratings"
+                      value="0"
+                      id="zero"/>
+                  0
+              </label>
+              <label for="one">
+                  <input
+                      type="radio"
+                      name="ratings"
+                      value="1"
+                      id="one"/>
+                  1
+              </label>
+              <label for="two">
+                  <input
+                      type="radio"
+                      name="ratings"
+                      value="2"
+                      id="two"/>
+                  2
+              </label>
+              <label for="three">
+                  <input
+                      type="radio"
+                      name="ratings"
+                      value="3"
+                      id="three"/>
+                  3
+              </label>
+              
+          </div>
+          
+      </section>
 
-        <input type="checkbox" id="spelslot3" name="slot2" value="Boat">
-        <label for="vehicle3"> Third Level Spell Slots</label><br>
-    </div>
-    <div>
-        <section id="spells-container"></section>
-    </div>
+      
+      <button>add </button>
+  </form>
+  <div>
+    <form>
+    <input type="checkbox" id="spelslot1" name="slot1" value="Bike">
+    
+    <input type="checkbox" id="spelslot2" name="slot2" value="Bike">  
+    
+    <input type="checkbox" id="spelslot3" name="slot3" value="Bike">
+    
+    <input type="checkbox" id="spelslot4" name="slot4" value="Bike">
+    <label for="spells1"> First Level Spell Slots</label><br>
+</form>
+</div>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+<div>
+    <form>
+    <input type="checkbox" id="spelslot5" name="slot1" value="Car">
+    
+    <input type="checkbox" id="spelslot6" name="slot2" value="Car">
+    
+    <input type="checkbox" id="spelslot7" name="slot3" value="Car">
+    <label for="spells2"> Second Level Spell Slots</label><br>
+</form>
+</div>
+
+<div>
+    <form>
+    <input type="checkbox" id="spelslot8" name="slot1" value="Boat">
+
+    <input type="checkbox" id="spelslot9" name="slot2" value="Boat">
+    <label for="spells3"> Third Level Spell Slots</label><br>
+  </form>
+</div>
+
+
+
+  
+  <section id="movies-container"></section>
+
+  </main>
+
+  <!-- <script>
+    document.getElementById('fortuneButton').onclick = function () {
+      axios.get("http://localhost:4000/api/fortune/")
+      .then(function (response) {
+        const data = response.data
+        alert(data)
+      })
+    }
+    
+    </script> -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
