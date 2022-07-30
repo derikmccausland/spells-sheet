@@ -5,37 +5,61 @@
 }
 
 body {
-    background-color: #232323;
+    background: url('https://www.wargamer.com/wp-content/uploads/2021/08/dnd-wizard-5e-class-guide-spellbook-casting.jpg');
 }
 
 header {
+    text-align: center;
     height: 80px; 
-    display: flex; 
+    font-size: 30px;
+    /* display: flex; 
     justify-content: center; 
-    align-items: center;
+    align-items: center; */
     color: blanchedalmond;
 }
 
 main {
-    display: flex; 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
 }
 
 form {
-    width: 350px;
-    height: 350px;
+    /* grid-row: 2/3; */
+    width: 200px;
+    height: 100px;
     background-color: blanchedalmond;
-    position: relative;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-evenly; 
-    align-items: center;
+    /* align-items: center; */
     margin: 30px;
+    padding: 25px;
+}
+.allSlots {
+    background-color: blanchedalmond;
+    /* height: 45px; */
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+}
+
+.slotDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 1/2;
+    grid-column: 1/2;
+    gap: 10px;
+    margin: 10px;
+}
+
+.secondDiv{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 button {
     background-color: #232323;
-    width: 75px;
+    width: 200px;
     height: 35px;
     color: blanchedalmond;
     border: none;
@@ -57,16 +81,22 @@ input[type='text'] {
 
 #radio-container {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    /* display: flex;
+    justify-content: space-around; */
+    /* align-items: center; */
 }
 
 #movies-container {
-    display: flex;
+    height: 775px;
+    width: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* grid-row:02/3;
+    grid-column: 1/2; */
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .movie-cover {
@@ -78,19 +108,23 @@ input[type='text'] {
 
 .movie-card {
     background-color: blanchedalmond;
-    width: 275px;
+    width: 95%;
     margin: 20px; 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     border-radius: 12px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    display: flex;
 }
 
 .movie-title {
     font-size: 18px;
+    width: 500px;
     margin: 5px 0;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .movie-rating {
@@ -100,8 +134,8 @@ input[type='text'] {
 
 .btns-container {
     width: 100%; 
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
     margin: 5px;
 }
 
@@ -109,15 +143,3 @@ input[type='text'] {
     width: 25px;
 }
 
-#complimentButton {
-    margin: 30px;
-    background-color: blanchedalmond;
-    color: #232323;
-    font-weight: 500;
-}
-#fortuneButton {
-    margin: 30px;
-    background-color: blanchedalmond;
-    color: #232323;
-    font-weight: 500;
-}

@@ -6,62 +6,16 @@
   </head>
   <body class="container">
     <header>
-      <h1>My Spell List</h1>
+      <h1>Tasha's Spell List</h1>
   </header>
 
   <main>
 
-  <form>
-      <input 
-          type='text'
-          id="title"
-          placeholder="Add Spell"/>
+  
 
-      <section id="ratings-container">
-          <p>Spell Level</p>
-          <div id="radio-container">
-              <label for="zero">
-                  <input
-                      type="radio"
-                      name="ratings"
-                      value="0"
-                      id="zero"/>
-                  0
-              </label>
-              <label for="one">
-                  <input
-                      type="radio"
-                      name="ratings"
-                      value="1"
-                      id="one"/>
-                  1
-              </label>
-              <label for="two">
-                  <input
-                      type="radio"
-                      name="ratings"
-                      value="2"
-                      id="two"/>
-                  2
-              </label>
-              <label for="three">
-                  <input
-                      type="radio"
-                      name="ratings"
-                      value="3"
-                      id="three"/>
-                  3
-              </label>
-              
-          </div>
-          
-      </section>
-
-      
-      <button>add </button>
-  </form>
-  <div>
-    <form>
+  <div class="slotDiv">
+  <div class="allSlots">
+    
     <input type="checkbox" id="spelslot1" name="slot1" value="Bike">
     
     <input type="checkbox" id="spelslot2" name="slot2" value="Bike">  
@@ -70,34 +24,80 @@
     
     <input type="checkbox" id="spelslot4" name="slot4" value="Bike">
     <label for="spells1"> First Level Spell Slots</label><br>
-</form>
+
 </div>
 
-<div>
-    <form>
+<div class="allSlots">
+    
     <input type="checkbox" id="spelslot5" name="slot1" value="Car">
     
     <input type="checkbox" id="spelslot6" name="slot2" value="Car">
     
     <input type="checkbox" id="spelslot7" name="slot3" value="Car">
     <label for="spells2"> Second Level Spell Slots</label><br>
-</form>
+
 </div>
 
-<div>
-    <form>
+<div class="allSlots">
+    
     <input type="checkbox" id="spelslot8" name="slot1" value="Boat">
 
     <input type="checkbox" id="spelslot9" name="slot2" value="Boat">
     <label for="spells3"> Third Level Spell Slots</label><br>
-  </form>
 </div>
+</div>
+<div class="secondDiv">
+    <section id="movies-container"></section>
+<form>
+    <input 
+        type='text'
+        id="title"
+        placeholder="Add Spell"/>
 
-
+    <section id="ratings-container">
+        <p>Spell Level</p>
+        <div id="radio-container">
+            <label for="zero">
+                <input
+                    type="radio"
+                    name="ratings"
+                    value="0"
+                    id="zero"/>
+                0
+            </label>
+            <label for="one">
+                <input
+                    type="radio"
+                    name="ratings"
+                    value="1"
+                    id="one"/>
+                1
+            </label>
+            <label for="two">
+                <input
+                    type="radio"
+                    name="ratings"
+                    value="2"
+                    id="two"/>
+                2
+            </label>
+            <label for="three">
+                <input
+                    type="radio"
+                    name="ratings"
+                    value="3"
+                    id="three"/>
+                3
+            </label>
+            <button>Add Spell </button>
+        </div>
+        
+    </section>
+    </form>
 
   
-  <section id="movies-container"></section>
-
+ 
+</div>
   </main>
 
   <!-- <script>

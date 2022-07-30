@@ -47,15 +47,14 @@ function createMovieCard(movie) {
 }
 
 function displayMovies(arr) {
+    let arr2 = arr.sort(function(a, b) {
+        return a.spellLvl - b.spellLvl
+    })
     moviesContainer.innerHTML = ``
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr2.length; i++) {
         createMovieCard(arr[i])
     }
 }
-//! on click check spell level
-//! find corrct spell slot form
-//! check first non-checked box
-//! alert which spell was cast or if slots are empty
 
 function castSpell(lvl) {
     if(lvl === 0) {
