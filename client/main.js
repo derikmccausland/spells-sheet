@@ -1,14 +1,14 @@
 const moviesContainer = document.querySelector('#movies-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4000/api/movies`
+const baseURL = `https://spell-sheet.herokuapp.com`
 
 const moviesCallback = ({ data: movies }) => displayMovies(movies)
 const errCallback = err => console.log(err.response.data)
 
-const getAllMovies = () => axios.get(baseURL).then(moviesCallback).catch(errCallback)
-const createMovie = body => axios.post(baseURL, body).then(moviesCallback).catch(errCallback)
-const deleteMovie = id => axios.delete(`${baseURL}/${id}`).then(moviesCallback).catch(errCallback)
+const getAllMovies = () => axios.get(`${baseURL}/api/movies`).then(moviesCallback).catch(errCallback)
+const createMovie = body => axios.post(`${baseURL}/api/movies`, body).then(moviesCallback).catch(errCallback)
+const deleteMovie = id => axios.delete(`${baseURL}/api/movies/${id}`).then(moviesCallback).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()
