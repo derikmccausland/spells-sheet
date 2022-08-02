@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('https://www.wargamer.com/wp-content/uploads/2021/08/dnd-wizard-5e-class-guide-spellbook-casting.jpg');
+}
+
+header {
+    text-align: center;
+    height: 80px; 
+    font-size: 30px;
+
+    color: blanchedalmond;
+}
+
+main {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+form {
+
+    width: 200px;
+    height: 100px;
+    background-color: blanchedalmond;
+    margin: 30px;
+    padding: 25px;
+}
+.allSlots {
+    background-color: blanchedalmond;
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+}
+
+.slotDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 1/2;
+    grid-column: 1/2;
+    gap: 10px;
+    margin: 10px;
+}
+
+.secondDiv{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+    background-color: #232323;
+    width: 200px;
+    height: 35px;
+    color: blanchedalmond;
+    border: none;
+    margin: 5px;
+}
+
+input[type='text'] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #232323;
+    color: #232323;
+    background-color: blanchedalmond;
+}
+
+#ratings-container {
+    width: 85%;
+}
+
+#radio-container {
+    width: 100%;
+}
+
+#movies-container {
+    height: 775px;
+    width: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.movie-cover {
+    width: 275px; 
+    height: 300px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.movie-card {
+    background-color: blanchedalmond;
+    width: 95%;
+    margin: 20px; 
+    border-radius: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+}
+
+.movie-title {
+    font-size: 18px;
+    width: 500px;
+    margin: 5px 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.movie-rating {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.btns-container {
+    width: 100%; 
+    margin: 5px;
+}
+
+.btns-container > button {
+    width: 25px;
+}
+
