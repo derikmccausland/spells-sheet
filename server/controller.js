@@ -1,4 +1,4 @@
-let movies = require('./db.json')
+let movies = require('/db')
 let globalID = 13
 
 module.exports = {
