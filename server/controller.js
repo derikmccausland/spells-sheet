@@ -1,4 +1,78 @@
-let movies = require('/db')
+let movies = [
+    {
+        "id": 1,
+        "title": "Mending",
+        "spellLvl": 0
+    },
+    
+    {
+        "id": 2,
+        "title": "Message",
+        "spellLvl": 0
+    },
+        
+    {
+        "id": 3,
+        "title": "Dancing Lights",
+        "spellLvl": 0
+    },  
+        
+    {
+        "id": 4,
+        "title": "Dissonant Whispers",
+        "spellLvl": 1
+    },  
+        
+    {
+        "id": 5,
+        "title": "Feather Fall",
+        "spellLvl": 1
+    },  
+        
+    {
+        "id": 6,
+        "title": "Healing Word",
+        "spellLvl": 1
+    },  
+        
+    {
+        "id": 7,
+        "title": "Thunderwave",
+        "spellLvl": 1
+    },  
+        
+    {
+        "id": 8,
+        "title": "Hold Person",
+        "spellLvl": 2
+    },      
+            
+    {
+        "id": 9,
+        "title": "Lesser Restoration",
+        "spellLvl": 2
+    },  
+            
+    {
+        "id": 10,
+        "title": "Invisibility",
+        "spellLvl": 2
+    },  
+            
+    {
+        "id": 11,
+        "title": "Fear",
+        "spellLvl": 3
+    },  
+            
+    {
+        "id": 12,
+        "title": "Dispel Magic",
+        "spellLvl": 3
+    }
+
+]
+
 let globalID = 13
 
 module.exports = {

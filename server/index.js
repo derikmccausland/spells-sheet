@@ -20,10 +20,6 @@ app.get('/js', (req, res) =>{
     res.sendFile(path.join(__dirname, '../client/main.js'))
 })
 
-app.get('/db', (req, res) =>{
-    res.sendFile(path.join(__dirname, './db.json'))
-})
-
 const {getMovies, deleteMovie, createMovie, updateMovie} = require('./controller.js')
 
 app.get(`/api/movies`, getMovies)
